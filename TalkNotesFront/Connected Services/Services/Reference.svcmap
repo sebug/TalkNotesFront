@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="426d77cb-fbf6-4dd0-9596-b0a72a22d70d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49857/TalkNoteService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TalkNoteService.wsdl" MetadataType="Wsdl" ID="4aa7ee85-f612-4003-b97a-e089b6018943" SourceId="1" SourceUrl="http://localhost:49857/TalkNoteService.svc?wsdl" />
+    <MetadataFile FileName="TalkNoteService.xsd" MetadataType="Schema" ID="c394b388-da80-46df-ad65-d2e4dcb83a58" SourceId="1" SourceUrl="http://localhost:49857/TalkNoteService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TalkNoteService.disco" MetadataType="Disco" ID="7eaf3987-4ae2-4bb2-8af5-32fa5b0c71a5" SourceId="1" SourceUrl="http://localhost:49857/TalkNoteService.svc?disco" />
+    <MetadataFile FileName="TalkNoteService1.xsd" MetadataType="Schema" ID="8a25feb0-12e0-4afa-bcef-dd5110007904" SourceId="1" SourceUrl="http://localhost:49857/TalkNoteService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TalkNoteService2.xsd" MetadataType="Schema" ID="f62802dc-e2cb-4fe5-b66a-6ca389b4466a" SourceId="1" SourceUrl="http://localhost:49857/TalkNoteService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

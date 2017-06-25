@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
+using TalkNotesFront.Services;
 
 namespace TalkNotesFront.Controllers
 {
-    public class ValuesController : ApiController
+    public class TalkNotesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        public async Task<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            var tsc = new TalkNoteServiceClient();
+            var talkNotes = await tsc.GetAllAsync();
+            return talkNotes.Select(tn => tn.Title);
         }
 
         // GET api/values/5
