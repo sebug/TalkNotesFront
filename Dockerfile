@@ -16,3 +16,5 @@ RUN Remove-Website -Name 'Default Web Site'; `
                 -ApplicationPool '.NET v4.5'
 
 COPY TalkNotesFront\bin\Release\PublishOutput TalkNotesFront
+
+ENTRYPOINT ["C:\\ServiceMonitor.exe", "w3svc"]
