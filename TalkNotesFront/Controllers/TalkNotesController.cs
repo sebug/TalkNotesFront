@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Tracing;
 using TalkNotesFront.Services;
 
 namespace TalkNotesFront.Controllers
@@ -14,6 +15,7 @@ namespace TalkNotesFront.Controllers
         // GET api/values
         public async Task<IEnumerable<string>> Get()
         {
+            Configuration.Services.GetTraceWriter().Debug(this.Request, "System.Web.Http.Controllers", "Calling Service to obtain talk notes.");
             var tsc = new TalkNoteServiceClient();
             var talkNotes = await tsc.GetAllAsync();
             return talkNotes.Select(tn => tn.Title);

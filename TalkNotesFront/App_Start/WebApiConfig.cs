@@ -10,6 +10,9 @@ namespace TalkNotesFront
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            var traceWriter = config.EnableSystemDiagnosticsTracing();
+            traceWriter.IsVerbose = true; // Mostly to show that we can intercept this in the container
+            traceWriter.MinimumLevel = System.Web.Http.Tracing.TraceLevel.Debug;
 
             // Web API routes
             config.MapHttpAttributeRoutes();
