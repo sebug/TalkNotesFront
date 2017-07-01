@@ -15,5 +15,4 @@ RUN Remove-Website -Name 'Default Web Site'; `
                 -Port 8081 -PhysicalPath 'C:\TalkNotesFront' `
                 -ApplicationPool '.NET v4.5'
 
-COPY TalkNotesFront\bin\Release\PublishOutput TalkNotesFrontOrig
-RUN mv C:\TalkNotesFrontOrig C:\TalkNotesFront
+COPY TalkNotesFront\bin\Release\PublishOutput TalkNotesFront
