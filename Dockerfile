@@ -17,7 +17,7 @@ RUN Remove-Website -Name 'Default Web Site'; `
 
 COPY TalkNotesFront\bin\Release\PublishOutput TalkNotesFront
 
-CMD Start-Service W3SVC; `
+ENTRYPOINT Start-Service W3SVC; `
     Invoke-WebRequest http://localhost:8081/api/TalkNotes -UseBasicParsing | Out-Null; `
     netsh http flush logbuffer | Out-Null; `
-    Get-Content -path 'c:\TraceOutput.log' -Tail 1 -Wait 
+    Get-Content -path c:\TalkNotesFront\*TraceOutput.log -Tail 1 -Wait 
