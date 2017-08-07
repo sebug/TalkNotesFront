@@ -46,7 +46,7 @@ RUN Copy-Item -Recurse TalkNotesFront\Views C:\Published\Views
 RUN Copy-Item TalkNotesFront\web.config C:\Published\web.config
 
 RUN $wc = [xml](Get-Content C:\Published\web.config); $oldAddress = $wc.configuration.'system.serviceModel'.client.endpoint.address; `
-     $newAddress = $oldAddress -Replace 'localhost:\d+', 'talknotesback:8082'; `
+     $newAddress = $oldAddress -Replace 'localhost:\d+', 'talk-notes-back:8082'; `
      $wc.configuration.'system.serviceModel'.client.endpoint.address = $newAddress ; `
      $wc.Save('C:\Published\web.config')
 

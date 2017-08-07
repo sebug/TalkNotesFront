@@ -15,9 +15,7 @@ namespace TalkNotesFront.Controllers
         // GET api/values
         public async Task<IEnumerable<string>> Get()
         {
-            string address = System.IO.File.ReadAllText("C:\\TalkNotesFront\\address.txt");
-            Configuration.Services.GetTraceWriter().Debug(this.Request, "System.Web.Http.Controllers", "Calling Service " + address + " to obtain talk notes.");
-            var tsc = new TalkNoteServiceClient("BasicHttpBinding_ITalkNoteService", address);
+            var tsc = new TalkNoteServiceClient();
             var talkNotes = await tsc.GetAllAsync();
             return talkNotes.Select(tn => tn.Title);
         }
