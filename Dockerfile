@@ -50,7 +50,7 @@ RUN $wc = [xml](Get-Content C:\Published\web.config); $oldAddress = $wc.configur
      $wc.configuration.'system.serviceModel'.client.endpoint.address = $newAddress ; `
      $wc.Save('C:\Published\web.config')
 
-FROM microsoft/iis
+FROM microsoft/iis:windowsservercore-10.0.14393.1480
 SHELL ["powershell", "-command"]
 
 # Install ASP.NET
